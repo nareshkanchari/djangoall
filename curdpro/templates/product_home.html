@@ -1,0 +1,65 @@
+{% load staticfiles %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <title>Product Home page</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .jumbotron{
+        background-image: linear-gradient(to top,aqua,antiquewhite,blue,antiquewhite,cyan);
+        {#border: 2px solid gold;#}
+        border-radius: 20px 100px;
+        {#box-shadow: 10px 10px 10px red , -10px -10px 10px green;#}
+    }
+    body{
+         background-image: linear-gradient(black,aqua);
+    }
+    h1{
+        color: ghostwhite;
+        font-size: 100px;
+        text-shadow: 2px 2px 3px whitesmoke, 5px 5px 7px blueviolet;
+    }
+    #btn1{
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px wheat,3px 3px 3px yellow ;
+        text-shadow: 2px 2px 2px blue,2px 2px 2px gold ;
+        background-image: linear-gradient(to right,green,green,green,white);
+    }
+
+    #btn2{
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px wheat,3px 3px 3px yellow ;
+        text-shadow: 2px 2px 2px blue,2px 2px 2px gold ;
+        background-image: linear-gradient(to right,blue,blue,blue,white);
+    }
+
+    #btn3{
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px wheat,3px 3px 3px yellow ;
+        text-shadow: 2px 2px 2px blue,2px 2px 2px gold ;
+        background-image: linear-gradient(to right,deeppink,deeppink,deeppink,white);
+    }
+
+    #btn4{
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px wheat,3px 3px 3px yellow ;
+        text-shadow: 2px 2px 2px blue,2px 2px 2px gold ;
+        background-image: linear-gradient(to right,red,red,red,white);
+    }
+</style>
+<body>
+<center><h1>Curd Operations</h1></center>
+<div class="jumbotron">
+<a href="/create/" class="btn btn-success" id="btn1">Create</a>
+<a href="/update/" class="btn btn-primary" id="btn2">Update</a>
+<a href="/retrieve/" class="btn btn-secondary" id="btn3">Retrieve</a>
+<a href="/delete/" class="btn btn-danger" id="btn4">Delete</a>
+</div>
+</body>
+</html>

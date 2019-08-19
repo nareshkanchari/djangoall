@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>Product Update Form</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    h2{
+        text-shadow: 2px 2px 2px whitesmoke,4px 4px 3px darkblue;
+        font-size: 50px;
+        color:darkslateblue;
+    }
+    body{
+       background-image: linear-gradient(to top,black,aqua);
+    }
+    label{
+        margin-top: -5px;
+        font-size: 20px;
+        color: darkblue;
+        font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+
+    }
+    form{
+        margin-top: 30px;
+    }
+    #divid{
+        margin: 40px 0px 0px 150px;
+
+    }
+    a{
+        text-shadow: 5px 5px 5px cyan,-5px -5px 5px cyan;
+        background-image: radial-gradient(black,aqua);
+    }
+     #inid1{
+            background-image: linear-gradient(to right,green,green,whitesmoke);
+        }
+    #inid2{
+            background-image: linear-gradient(to right,red,red,whitesmoke);
+        }
+
+</style>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h2>Upgrade Product</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <label>Enter Product ID:</label>
+                {{ uform.product_cost }}<br>
+                <label>Enter Product cost:</label>
+                {{ uform.product_cost}}<br>
+                <center>
+                <input type="submit" value="Update" class="btn btn-success" id="inid1">
+                <input type="reset" value="Clear" class="btn btn-danger" id="inid2">
+                </center>
+            </form>
+        </div>
+        <div id="divid">
+            <a id="aid" href="/#/" class="btn btn-dark">Home</a> </div>
+    </div>
+</div>
+</body>
+</html>
